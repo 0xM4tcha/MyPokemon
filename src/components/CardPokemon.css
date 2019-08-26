@@ -1,0 +1,70 @@
+.cardPok {
+    margin-left:10px;
+    margin-right:10px;
+}
+.cardPok:hover {
+    box-shadow: 2px 3px 14px -3px rgba(67,193,240,1);
+    cursor: pointer;
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+.pictPok{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+
+}
+
+@media screen and (min-width: 600px) {
+    .cardPok{
+        border-radius:50px;
+    }
+    .pictPok{
+        margin-top: -30px;
+        width: 100%;
+        margin-left: 0px;
+    }
+    h1{
+        text-align: left;
+        margin-left: 150px;
+        margin-top: -80px;
+        margin-bottom: 10px;
+    }
+    h2{
+        text-align: right;
+        margin-bottom: -10px;
+        margin-top: -20px;
+        margin-right: 30px;
+    }
+    
+}
+@media screen and (min-width: 768px) {
+    .cardPok {
+        margin-left:10px;
+        margin-right:10px;
+        border-radius:10px;
+    }
+    .pictPok{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    h1{
+        text-align: center;
+        font-size: 30px;
+
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    h2{
+        text-align: right;
+        margin-bottom: -10px;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+}
