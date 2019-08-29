@@ -5,9 +5,10 @@ export const PokemonReducer = (state, action) => {
             return [...state, {
                 nickname:action.myPokemon.nickname,
                 id:uuid(),
-                idPok:action.myPokemon.idPok
+                idPok:action.myPokemon.idPok,
+                namePok:action.myPokemon.name
             }]
-        case 'REMOVE_BOOK' :
+        case 'REMOVE_POKEMON' :
             return state.filter(myPokemon => myPokemon.id != action.id)
         default:
             return state       

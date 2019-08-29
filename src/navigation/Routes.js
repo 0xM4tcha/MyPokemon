@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Route,IndexRoute } from "react-router"
 import App from '../App.js'
-import ListPokemon from '../view/ListPokemon'
 import DetailPokemon from '../view/DetailPokemon'
 import MyPokemon from '../view/MyPokemon'
 import ListTypePokemon from '../view/ListTypePokemon'

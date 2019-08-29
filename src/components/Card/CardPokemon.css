@@ -10,23 +10,23 @@ h1{
     text-align: center;
     font-size: 30px;
 }
-.pictPok{
-    display: block;
+/* .pictPok{ */
+    /* display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 50%; */
 
-}
+/* } */
 
 @media screen and (min-width: 600px) {
     .cardPok{
         border-radius:50px;
     }
-    .pictPok{
-        margin-top: -30px;
-        width: 100%;
-        margin-left: 0px;
-    }
+    /* .pictPok{ */
+        /* margin-top: -30px; */
+        /* width: 30%; */
+        /* margin-left: 0px; */
+    /* } */
     h1{
         text-align: left;
         margin-left: 150px;
@@ -43,27 +43,34 @@ h1{
 }
 @media screen and (min-width: 768px) {
     .cardPok {
-        margin-left:10px;
-        margin-right:10px;
+        margin-left:0px;
+        margin-right:0px;
         border-radius:10px;
     }
-    .pictPok{
+    .cardPok, img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+    }
+    /* .pictPok{
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 50%;
-    }
-    h1{
+    } */
+    .cardPok, h1{
         text-align: center;
-        font-size: 30px;
+        font-size: 20px;
 
-        margin-left: 0px;
+        margin-left: 50px;
         margin-top: 0px;
         margin-bottom: 0px;
     }
-    h2{
+    .cardPok, h2{
         text-align: right;
-        margin-bottom: -10px;
+        font-size: 10px;
+        margin-bottom: -20px;
         margin-top: 0px;
         margin-right: 0px;
     }

@@ -2,16 +2,13 @@ import React, { useState, useContext, useEffect } from 'react'
 import axios from 'axios'
 import './Detail.css'
 import RadarChart from 'react-svg-radar-chart';
-// import ModalCatchBerhasil from '../components/ModalCatchBerhasil'
-// import ModalCatchGagal from '../components/ModalCatchGagal'
-import ModalStart from '../components/ModalStart'
+import ModalStart from '../components/Modal/ModalStart'
 
 const DetailPokemon = () => {
     const id = localStorage.getItem('id')
 
     const [ abilities, setAbilities ]   = useState([])
     const [ form ]                      = useState(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`)
-    const [ effect, setEffect ]         = useState([])
     const [ moves, setMoves ]           = useState([])
     const [ hideMoves, setHide ]        = useState(true)
     const SMoves         = moves.slice(0, 20)
@@ -19,7 +16,6 @@ const DetailPokemon = () => {
     const [ weight, setWeight ]         = useState('')
     const [ height, setHeight ]         = useState('')
     const [ type, setType ]             = useState([])
-    
     const [ speed, setSpeed ]           = useState(0)
     const [ sd, setSd ]                 = useState(0)
     const [ sa, setSa ]                 = useState(0)
@@ -45,9 +41,6 @@ const DetailPokemon = () => {
                 setDef(res.data.stats[3].base_stat/100)
                 setAtk(res.data.stats[4].base_stat/100)
                 setHp(res.data.stats[5].base_stat/100)
-
-                // console.log(res.data.stats[0].base_stat)
-                // console.log(res.data.stats[1].base_stat/100)
     
             })
                 

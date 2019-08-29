@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
-import './Header.css'
-import { PokemonContext } from '../context/PokemonContext'
+import '../Header.css'
+import { PokemonContext } from '../../context/PokemonContext'
 import { browserHistory } from "react-router"
 
 const ModalCatchBerhasil = ({isModal, closeBerhasil, sprite, idPok}) => {
@@ -9,7 +9,7 @@ const ModalCatchBerhasil = ({isModal, closeBerhasil, sprite, idPok}) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({type:'ADD_POKEMON', myPokemon:{
-            nickname,idPok
+            nickname,idPok,namePok:sprite
         }})
         browserHistory.push("/MyPokemon");
     }
