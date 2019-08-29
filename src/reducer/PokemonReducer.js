@@ -9,7 +9,7 @@ export const PokemonReducer = (state, action) => {
                 namePok:action.myPokemon.name
             }]
         case 'REMOVE_POKEMON' :
-            return state.filter(myPokemon => myPokemon.id != action.id)
+            return state.filter(myPokemon => myPokemon.id !== action.id)
         default:
             return state       
     }

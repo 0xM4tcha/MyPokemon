@@ -3,7 +3,7 @@ import '../Header.css'
 import { PokemonContext } from '../../context/PokemonContext'
 import { browserHistory } from "react-router"
 
-const ModalCatchBerhasil = ({isModal, closeBerhasil, sprite, idPok}) => {
+const ModalCatchBerhasil = ({isModal, sprite, idPok}) => {
     const {dispatch} = useContext(PokemonContext)
     const [ nickname, setNickname] = useState('')
     const handleSubmit = (e) => {

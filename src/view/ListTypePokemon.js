@@ -4,20 +4,18 @@ import CardPokemonByType from '../components/Card/CardPokemonByType'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-
 const ListTypePokemon = () => {
     const [ dataType, setTypePokemon ]          = useState([])
-    const [ url ]                               = useState(`https://pokeapi.co/api/v2/type/`)
     
     useEffect(() => {
-        axios.get(url)
+        axios.get(`https://pokeapi.co/api/v2/type/`)
         .then((res) =>{
             setTypePokemon(res.data.results)
         })
     },[])
     return ( 
         <React.Fragment>
-            <Header/>
+            <Header name='data' MyPokemons={dataType}/>
             <div className="columns" style={{marginBottom:200}} >
                 <div className="column is-10 is-offset-1" >
                     {
@@ -32,7 +30,7 @@ const ListTypePokemon = () => {
                     }
                 </div>
             </div>    
-            <Footer/>
+            <Footer name='listPokemon' MyPokemons='list' />
         </React.Fragment>
      );
 }

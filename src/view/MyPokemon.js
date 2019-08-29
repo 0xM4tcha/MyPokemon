@@ -1,18 +1,15 @@
-import React, { useState, useContext, useEffect } from 'react'
-import HeaderMyPokemon from '../components/HeaderMyPokemon'
+import React, { useContext } from 'react'
+import Header from '../components/Header'
 import { PokemonContext } from '../context/PokemonContext'
 import CardMyPokemon from '../components/Card/CardMypokemon'
+import Footer from '../components/Footer'
 
 const MyPokemon = () => {
     const { MyPokemons } = useContext(PokemonContext)
-   
-    useEffect(() => {
 
-    },[])
-
-    return  MyPokemons.length? (
+    return  MyPokemons.length ? (
         <React.Fragment>
-            <HeaderMyPokemon />
+            <Header name={MyPokemons} MyPokemons={MyPokemons} />
                 <div className="columns">
                     <div className="column is-10 is-offset-1">
                         <div className="columns is-multiline is-offset-2" >
@@ -30,10 +27,11 @@ const MyPokemon = () => {
                         </div>
                     </div>
                 </div>
+            <Footer name={MyPokemons} MyPokemons={MyPokemons} />
         </React.Fragment>
     ): ( 
         <React.Fragment>
-            <HeaderMyPokemon />
+            <Header name='MyPokemons' />
             <h1 style={{marginTop:0}}>Kamu tidak memiliki pokemon </h1>
         </React.Fragment>
      );

@@ -1,9 +1,9 @@
 import React from 'react'
 import { browserHistory } from "react-router"
 
-const Footer = () => {
+const Footer = ({name, MyPokemons}) => {
      const next = () => {
-        browserHistory.push("/MyPokemon");
+        browserHistory.push(`${name === MyPokemons ? '/':'/MyPokemon'}`);
     }
     return ( 
         <footer 
@@ -29,7 +29,7 @@ const Footer = () => {
                         is-outlined" 
                     onClick={next}
                  >
-                    Go to MY Pokemon
+                    Go to {name === MyPokemons ? 'List Pokemons' : 'My Pokemons'}
                 </a>
             </div>
         </footer>

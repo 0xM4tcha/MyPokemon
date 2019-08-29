@@ -15,7 +15,7 @@ const ModalRelease = ({isModal, closeModal, id, name}) => {
             <div className="modal-card">
                 <section className="modal-card-body">
                     <h1>Release {name}</h1>
-                    <a className="button" onClick={release}>Ok</a>
+                    <a className="button" onClick={() =>release()}>Ok</a>
                 </section>
             </div>
         </div>

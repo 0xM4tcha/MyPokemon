@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Route,IndexRoute } from "react-router"
 import App from '../App.js'
 import DetailPokemon from '../view/DetailPokemon'

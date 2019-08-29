@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useContext } from 'react'
-import axios from 'axios'
-// import './CardPokemon.css'
+import React, { useState } from 'react'
+import './CardPokemon.css'
 import ModalRelease from '../Modal/ModalRelease'
 
 const CardMyPokemon = ({nickname, id, idPok}) => {

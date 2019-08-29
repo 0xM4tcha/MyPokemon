@@ -3,7 +3,6 @@ import ModalCatchBerhasil from './/ModalCatchBerhasil'
 import ModalCatchGagal from './ModalCatchGagal'
 
 const ModalStart = ({isModal, sprite, closeModal, idPok}) => {
-    const [ gatcha, setGatcha ]          = useState('')
     const [ modalBerhasil, setBerhasil ] = useState(false)
     const [ modalGagal, setGagal ]       = useState(false)
     

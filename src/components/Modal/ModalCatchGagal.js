@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 const ModalCatchGagal = ({isModal, closeGagal}) => {
     return ( 
         <div className={`modal ${isModal && 'is-active'}`}>
@@ -7,7 +7,7 @@ const ModalCatchGagal = ({isModal, closeGagal}) => {
             <div className="modal-card">
                 <section className="modal-card-body">
                     <h1>Maaf Kamu Gagal, cobali lagi ?</h1>
-                    <a className="button" onClick={closeGagal}>Ok</a>
+                    <a className="button" onClick={closeGagal()}>Ok</a>
                 </section>
             </div>
         </div>
