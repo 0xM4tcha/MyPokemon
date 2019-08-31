@@ -49,6 +49,7 @@ const DetailPokemon = () => {
         const closeModal = () => {
             setModalStart(false)
         }
+        
     
     return ( 
         <React.Fragment>

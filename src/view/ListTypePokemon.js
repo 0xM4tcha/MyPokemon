@@ -13,6 +13,10 @@ const ListTypePokemon = () => {
             setTypePokemon(res.data.results)
         })
     },[])
+    function add(a) {
+        return a;
+      }
+      module.exports = add;
     return ( 
         <React.Fragment>
             <Header name='data' MyPokemons={dataType}/>
