@@ -2,15 +2,12 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './CardPokemon.css'
 import CardPokemon from './CardPokemon'
-// import { PokemonContext } from '../../context/PokemonContext'
 
 const CardPokemonByType = ({name, url}) => {
-    // const { MyPokemons }    = useContext(PokemonContext)
 
     const idPok = url.split('/')[url.split('/').length - 2]
     const [ pokemon, setPokemon ] = useState([])
     const [ hide, setHide ]       = useState(true)
-    // const [arr, setArr ]                        = useState([])
     
     useEffect(() => {
         axios.get(`https://pokeapi.co/api/v2/type/${idPok}`)

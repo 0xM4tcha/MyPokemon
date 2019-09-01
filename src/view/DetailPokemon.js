@@ -65,7 +65,7 @@ const DetailPokemon = () => {
                         </div>
                     </div>
                     
-                    <div className="cardDetail" >
+                    <div className="cardDetail" style={{marginBottom:30}} >
                         <div className="columns is-mobile">
                             <div className="column is-4" >
                             <RadarChart

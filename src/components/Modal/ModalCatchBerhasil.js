@@ -3,22 +3,27 @@ import '../Header.css'
 import { PokemonContext } from '../../context/PokemonContext'
 import { browserHistory } from "react-router"
 
-const ModalCatchBerhasil = ({isModal, sprite, idPok}) => {
+const ModalCatchBerhasil = ({isModal, sprite, idPok, closeBerhasil}) => {
     const {dispatch} = useContext(PokemonContext)
     const [ nickname, setNickname] = useState('')
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({type:'ADD_POKEMON', myPokemon:{
-            nickname,idPok,namePok:sprite
+            nickname,idPok,namePok:sprite.name
         }})
         browserHistory.push("/MyPokemon");
     }
     return ( 
         <div className={`modal ${isModal && 'is-active'}`}>
-            <div className="modal-background"></div>
+            <div className="modal-background" onClick={closeBerhasil} ></div>
             <div className="modal-card">
+                <header className="modal-card-head">
+                    <p className="modal-card-title">Succes</p>
+                    <button className="delete" aria-label="close" onClick={closeBerhasil}></button>
+                </header>
                 <section className="modal-card-body">
-                    <h1 style={{textAlign:'center'}}>Gotcha kamu mendapatkan {sprite.name}</h1>
+                    
+                    <p style={{textAlign:'center', fontSize:30}}>Gotcha kamu mendapatkan {sprite.name} !!</p>
                     
                     <form onSubmit={handleSubmit}>
                     <div className="field has-addons" >
@@ -26,7 +31,7 @@ const ModalCatchBerhasil = ({isModal, sprite, idPok}) => {
                             <input 
                                 className="input addPok" 
                                 type="text" 
-                                placeholder="Input Nickname Pokemon"
+                                placeholder="Input Nickname Your Pokemon"
                                 value={nickname}   
                                 onChange={(e) => setNickname(e.target.value)}
                                 required
@@ -39,6 +44,8 @@ const ModalCatchBerhasil = ({isModal, sprite, idPok}) => {
                     </form>
 
                 </section>
+                <footer className="modal-card-foot">
+                </footer>
             </div>
         </div>
      );

@@ -2,9 +2,9 @@ import React from 'react'
 import './Header.css'
 import { browserHistory } from "react-router"
 
-const Header = ({name, MyPokemons}) => {
+const HeaderMy = ({name, MyPokemons}) => {
     const next = () => {
-        browserHistory.push(`${name === MyPokemons ? '/':'MyPokemon'}`);
+        browserHistory.push(`${name === MyPokemons ? '/':'/MyPokemon'}`);
     }
     return ( 
         <section className="hero title" style={{marginBottom:10}}>
@@ -19,16 +19,7 @@ const Header = ({name, MyPokemons}) => {
                     
                     <div className="columns">
                         <div className="column is-6 is-offset-3">
-                            <div className="field has-addons" >
-                                <div className="control">
-                                    <input className="input searchPok" type="text" placeholder="Find a Pokemon"/>
-                                </div>
-                                <div className="control">
-                                    <a className="button btnPok" style={{color:'#43c1f0'}}>
-                                        Search
-                                    </a>
-                                </div>
-                            </div>
+                            
                             <div className="content has-text-centered is-hidden-mobile">
                                 <a 
                                     className="
@@ -41,7 +32,7 @@ const Header = ({name, MyPokemons}) => {
                                         is-outlined" 
                                     onClick={next}
                                  >
-                                    Go to {name === MyPokemons ? 'List Pokemons':'My Pokemons'}
+                                    Go to {`${name === MyPokemons ? 'List Pokemon':'My Pokemon'}`}
                                 </a>
                             </div>
                         </div>
@@ -53,4 +44,4 @@ const Header = ({name, MyPokemons}) => {
      );
 }
  
-export default Header;
+export default HeaderMy;

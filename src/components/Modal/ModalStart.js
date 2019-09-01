@@ -9,13 +9,9 @@ const ModalStart = ({isModal, sprite, closeModal, idPok}) => {
     const handleGatcha = () => {
         const random = Math.floor(Math.random() * 10)
         if(random <= 4){
-            // setGatcha(random)
             setBerhasil(true)
-            // closeModal()
         }else{
-            // setGatcha(random)
             setGagal(true)
-            // closeModal()
         }
     }
     const closeBerhasil = () => {
@@ -29,16 +25,20 @@ const ModalStart = ({isModal, sprite, closeModal, idPok}) => {
         <div className={`modal ${isModal && 'is-active'}`}>
             <ModalCatchBerhasil isModal={modalBerhasil} closeBerhasil={closeBerhasil} sprite={sprite} idPok={idPok} />
             <ModalCatchGagal isModal={modalGagal} closeGagal={closeGagal}/>
-            
-            <div className="modal-background"></div>
-            <div className="modal-card">
-                <section className="modal-card-body">
-                    <h1>Catch {sprite.name}?</h1>
-                    {/* <h1>{gatcha}</h1> */}
-                    <a className="button" onClick={handleGatcha}>Ok</a>
-                    <a className="button" onClick={closeModal}>No</a>
-                </section>
-            </div>
+                <div className="modal-background" onClick={closeModal}></div>
+                <div className="modal-card">
+                    <header className="modal-card-head">
+                        <p className="modal-card-title">Catch Pokemon</p>
+                        <button className="delete" aria-label="close" onClick={closeModal}></button>
+                    </header>
+                    <section className="modal-card-body ">
+                        <p style={{fontSize:30, textAlign:'center'}}>Catch {sprite.name}?</p>
+                    </section>
+                    <footer className="modal-card-foot">
+                        <button className="button is-success" onClick={handleGatcha}>OK</button>
+                        <button className="button" onClick={closeModal}>NO</button>
+                    </footer>
+                </div>
         </div>
      );
 }

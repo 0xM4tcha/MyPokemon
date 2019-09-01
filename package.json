@@ -1,18 +1,32 @@
 {
   "name": "my-pokemon",
   "jest": {
-    "verbose": true
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+      },
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.css$": "jest-transform-css"
+    }
   },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.19.0",
+    "babel-jest": "^24.9.0",
     "bulma": "^0.7.5",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "font-awesome": "^4.7.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-transform-css": "^2.0.0",
     "moment": "^2.24.0",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
@@ -21,7 +35,8 @@
     "react-router": "^3.2.3",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
-    "react-svg-radar-chart": "^1.2.0"
+    "react-svg-radar-chart": "^1.2.0",
+    "react-test-renderer": "^16.9.0"
   },
   "scripts": {
     "start": "react-scripts start",

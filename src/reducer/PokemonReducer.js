@@ -6,7 +6,7 @@ export const PokemonReducer = (state, action) => {
                 nickname:action.myPokemon.nickname,
                 id:uuid(),
                 idPok:action.myPokemon.idPok,
-                namePok:action.myPokemon.name
+                namePok:action.myPokemon.namePok
             }]
         case 'REMOVE_POKEMON' :
             return state.filter(myPokemon => myPokemon.id !== action.id)
