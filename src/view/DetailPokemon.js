@@ -59,7 +59,7 @@ const DetailPokemon = () => {
                     <div className="columns">
                         <div className="column is-4 is-offset-4">
                             <figure className="image pictPok">
-                                <img className="is-square" src={form} alt="Placeholder image"/>
+                                <img src={form} alt="Placeholder image" />
                             </figure>
                             <img className='pocketball' onClick={() => setModalStart(true)} src={process.env.PUBLIC_URL + '/pocketball.png'}  />
                         </div>
@@ -67,7 +67,7 @@ const DetailPokemon = () => {
                     
                     <div className="cardDetail" style={{marginBottom:30}} >
                         <div className="columns is-mobile">
-                            <div className="column is-4" >
+                            <div className="column is-4 state" >
                             <RadarChart
                                 captions={{
                                     speed : 'Speed',

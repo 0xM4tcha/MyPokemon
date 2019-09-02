@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route,IndexRoute } from "react-router"
 import App from '../App.js'
-import DetailPokemon from '../view/DetailPokemon'
+import DetailPokemon from '../view/DetailPokemon2'
 import MyPokemon from '../view/MyPokemon'
 import ListTypePokemon from '../view/ListTypePokemon'
 

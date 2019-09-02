@@ -14,10 +14,6 @@ const CardPokemonByType = ({name, url}) => {
         .then((res) => {
             setPokemon(res.data.pokemon)
         })
-        // for (var i = 0; i<MyPokemons.length; i++){
-        //     setArr(MyPokemons[i].name)
-        //     console.log('arr', arr)
-        // }
     },[])
     
     return (
